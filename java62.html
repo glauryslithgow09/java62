@@ -1,0 +1,69 @@
+<!--<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Glaurys Lithgow</title>
+    <meta charset="UTF-8">
+</head>
+
+<body style="background-color: darkorange;">
+
+    <script>
+        function calcular(x, y, fu) {
+            var resu = fu(x, y);
+            return resu;
+        }
+
+        var n1 = calcular(50, 15, function(n1, n2) {
+            return n1 + n2;
+        });
+
+        document.write(n1 + '<br>');
+
+        var n2 = calcular(50, 15, function(n1, n2) {
+            return n1 + n2
+        });
+
+        document.write(s2 + '<br>');
+    </script>
+
+</body>-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body style="background-color: darkorchid;">
+
+    <form method="post" action="procesar.php" id="formulario1">
+        Ingrese Usuario:
+        <input type="text" id="usuario" name="usuario" size="30">
+        <br> Ingrese Contraseña:
+        <input type="password" id="clave" name="clave" size="10">
+        <br>
+        <input type="submit" id="confirmar" name="confirmar" value="Confirmar">
+    </form>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', inicio, false);
+
+        function inicio() {
+            document.getElementById("formulario1").addEventListener('submit', validar, false);
+        }
+
+        function validar(evt) {
+            var usu = document.getElementById("usuario").value;
+            var cla = document.getElementById("clave").value;
+            if (usu.length == 0 || cla.length == 0) {
+                alert('El nombre de usuario o clave está vacío');
+                evt.preventDefault();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
